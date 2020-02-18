@@ -35,10 +35,14 @@ server.use(bp.json());
 //NOTE next we want to register all our routes(doorways that can be accessed in our app)
 
 //NOTE we have to import access to our controllers
-import CarsController from "./controllers/CarsController";
+import CarsController from "./controllers/CarsController.js";
+import HousesController from "./controllers/HousesController.js";
+// import JobsController from "./controllers/JobsController.js";
 
 //NOTE remember the forward slash at the start of your path!
 server.use("/api/cars", new CarsController().router);
+server.use("/api/houses", new HousesController().router);
+// server.use("/api/jobs", new JobsController().router);
 
 //NOTE Everything below this line always stays the same
 
